@@ -1,6 +1,6 @@
 import pytest
 
-from chapitre_fixture import PorteFeuille
+from ..chapitre_fixture import PorteFeuille
 
 def test_1():
     mon_porte_feuille = PorteFeuille()
