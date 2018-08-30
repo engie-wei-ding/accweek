@@ -57,7 +57,8 @@ def test_7(deposer_montant, denperser_montant, balance_montant):
 @pytest.mark.parametrize("deposer_montant, denperser_montant, balance_montant",[
                             (100, 50, 100),
                             (25, 5, 70),
-                            (1000, 0, 1050)
+                            (1000, 0, 1050),
+                            (50, 0, 100)
 ])
 def test_8(porte_feulle_50_euros, deposer_montant, denperser_montant, balance_montant):
     porte_feulle_50_euros.deposer(deposer_montant)
