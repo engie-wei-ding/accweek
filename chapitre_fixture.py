@@ -1,14 +1,14 @@
 class PorteFeuille():
 
-    def __init__(self, initial_montant = 0):
-        self._balance = initial_montant
+    def __init__(self, montant=0):
+        self._balance = montant
 
     @property
-    def _balance(self):
+    def montant(self):
         return self._balance
 
-    @_balance.setter
-    def _balance(self, montant):
+    @montant.setter
+    def montant(self, montant):
         self._balance = montant
         return self
 
@@ -18,7 +18,6 @@ class PorteFeuille():
         else:
             self._balance -= montant
         return self
-
 
     def deposer(self, montant):
         self._balance += montant

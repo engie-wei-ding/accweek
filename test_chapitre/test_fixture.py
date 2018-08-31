@@ -4,17 +4,17 @@ from ..chapitre_fixture import PorteFeuille
 
 def test_1():
     mon_porte_feuille = PorteFeuille()
-    assert mon_porte_feuille._balance == 0
+    assert mon_porte_feuille.montant == 0
 
 def test_2():
     mon_porte_feuille = PorteFeuille()
     mon_porte_feuille.deposer(50)
-    assert mon_porte_feuille._balance == 50
+    assert mon_porte_feuille.montant == 50
 
 def test_3():
-    mon_porte_feuille = PorteFeuille(initial_montant = 100)
+    mon_porte_feuille = PorteFeuille(montant = 100)
     mon_porte_feuille.deposer(50)
-    assert mon_porte_feuille._balance == 150
+    assert mon_porte_feuille.montant == 150
 
 @pytest.fixture
 def porte_feuille_vide():
@@ -27,7 +27,7 @@ def test_4(porte_feuille_vide):
 
 @pytest.fixture
 def porte_feulle_50_euros():
-    return PorteFeuille(initial_montant=50)
+    return PorteFeuille(montant=50)
 
 def test_5(porte_feulle_50_euros):
     porte_feulle_50_euros.deposer(50)

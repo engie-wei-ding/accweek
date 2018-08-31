@@ -1,0 +1,15 @@
+{
+  "test_chapitre/test_fixture.py::test_1": true,
+  "test_chapitre/test_fixture.py::test_2": true,
+  "test_chapitre/test_fixture.py::test_3": true,
+  "test_chapitre/test_fixture.py::test_4": true,
+  "test_chapitre/test_fixture.py::test_5": true,
+  "test_chapitre/test_fixture.py::test_6": true,
+  "test_chapitre/test_fixture.py::test_7[100-50-50]": true,
+  "test_chapitre/test_fixture.py::test_7[1000-0-1000]": true,
+  "test_chapitre/test_fixture.py::test_7[25-5-20]": true,
+  "test_chapitre/test_fixture.py::test_8[100-50-100]": true,
+  "test_chapitre/test_fixture.py::test_8[1000-0-1050]": true,
+  "test_chapitre/test_fixture.py::test_8[25-5-70]": true,
+  "test_chapitre/test_fixture.py::test_8[50-0-100]": true
+}
