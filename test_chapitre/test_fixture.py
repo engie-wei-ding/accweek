@@ -4,17 +4,17 @@ from ..chapitre_fixture import PorteFeuille
 
 def test_1():
     mon_porte_feuille = PorteFeuille()
-    assert mon_porte_feuille.montant == 0
+    assert mon_porte_feuille.balance == 0
 
 def test_2():
     mon_porte_feuille = PorteFeuille()
     mon_porte_feuille.deposer(50)
-    assert mon_porte_feuille.montant == 50
+    assert mon_porte_feuille.balance == 50
 
 def test_3():
-    mon_porte_feuille = PorteFeuille(montant = 100)
+    mon_porte_feuille = PorteFeuille(montant=100)
     mon_porte_feuille.deposer(50)
-    assert mon_porte_feuille.montant == 150
+    assert mon_porte_feuille.balance == 150
 
 @pytest.fixture
 def porte_feuille_vide():
@@ -23,7 +23,7 @@ def porte_feuille_vide():
 # porte_feuille_vide : un instant de classe PorteFeuille avec initial_montant = 0
 def test_4(porte_feuille_vide):
     porte_feuille_vide.deposer(50)
-    assert porte_feuille_vide._balance == 50
+    assert porte_feuille_vide.balance == 50
 
 @pytest.fixture
 def porte_feulle_50_euros():
@@ -31,7 +31,7 @@ def porte_feulle_50_euros():
 
 def test_5(porte_feulle_50_euros):
     porte_feulle_50_euros.deposer(50)
-    assert porte_feulle_50_euros._balance == 100
+    assert porte_feulle_50_euros.balance == 100
 
 def test_6(porte_feulle_50_euros):
     with pytest.raises(ValueError):
@@ -49,7 +49,7 @@ def test_7(deposer_montant, denperser_montant, balance_montant):
     mon_porte_feuille = PorteFeuille()
     mon_porte_feuille.deposer(deposer_montant)
     mon_porte_feuille.depenser(denperser_montant)
-    assert mon_porte_feuille._balance == balance_montant
+    assert mon_porte_feuille.balance == balance_montant
 
 #use fixture with pytest.mark.parametrize
 
@@ -63,7 +63,7 @@ def test_7(deposer_montant, denperser_montant, balance_montant):
 def test_8(porte_feulle_50_euros, deposer_montant, denperser_montant, balance_montant):
     porte_feulle_50_euros.deposer(deposer_montant)
     porte_feulle_50_euros.depenser(denperser_montant)
-    assert porte_feulle_50_euros._balance == balance_montant
+    assert porte_feulle_50_euros.balance == balance_montant
 
 
 
