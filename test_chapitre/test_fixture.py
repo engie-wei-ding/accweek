@@ -12,7 +12,7 @@ def test_2():
     assert mon_porte_feuille.balance == 50
 
 def test_3():
-    mon_porte_feuille = PorteFeuille(montant=100)
+    mon_porte_feuille = PorteFeuille(initial_montant=100)
     mon_porte_feuille.deposer(50)
     assert mon_porte_feuille.balance == 150
 
@@ -27,7 +27,7 @@ def test_4(porte_feuille_vide):
 
 @pytest.fixture
 def porte_feulle_50_euros():
-    return PorteFeuille(montant=50)
+    return PorteFeuille(initial_montant=50)
 
 def test_5(porte_feulle_50_euros):
     porte_feulle_50_euros.deposer(50)

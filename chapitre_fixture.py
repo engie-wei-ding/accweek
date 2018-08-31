@@ -1,7 +1,7 @@
 class PorteFeuille():
 
-    def __init__(self, montant=0):
-        self._balance = montant
+    def __init__(self, initial_montant=0):
+        self.balance = initial_montant
 
     @property
     def balance(self):
@@ -9,6 +9,8 @@ class PorteFeuille():
 
     @balance.setter
     def balance(self, montant):
+        if isinstance(montant, str):
+            raise ValueError('Montant doit etre numerique')
         self._balance = montant
         return self
 
